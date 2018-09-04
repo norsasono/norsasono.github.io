@@ -1,0 +1,45 @@
+/*------------------------------------*\
+  Components > Themes Filter
+\*------------------------------------*/
+
+.c-filter {
+  display: flex;
+  margin-bottom: double($base-spacing-unit);
+
+  &__btn {
+    margin-right: half($base-spacing-unit);
+
+    @include mq($from: tablet) {
+      margin-right: $base-spacing-unit;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__input {
+    display: none;
+
+    &--all:checked ~ .ghost,
+    &--all:checked ~ .jekyll,
+    &--all:checked ~ .wordpress {
+      display: block;
+    }
+
+    &--ghost:checked ~ .jekyll,
+    &--ghost:checked ~ .wordpress {
+      display: none;
+    }
+
+    &--jekyll:checked ~ .ghost,
+    &--jekyll:checked ~ .wordpress {
+      display: none;
+    }
+
+    &--wordpress:checked ~ .ghost,
+    &--wordpress:checked ~ .jekyll {
+      display: none;
+    }
+  }
+}

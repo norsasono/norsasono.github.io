@@ -1,0 +1,42 @@
+---
+layout: default
+title: Noreta Agus Sasono - Digital Graphic Designer
+body-class: is-home
+excerpt: Nama saya Noreta Agus Sasono, seorang pekerja desain digital. Saat ini bekerja sebagai Graphic & Web Designer di salah satu perusahaan swasta di Kota Madiun.
+---
+
+{% assign themes = (site.themes | sort: 'date') | reverse %}
+
+<div class='c-home-hero'>
+  <div class='o-grid'>
+    <div class='o-grid__col'>
+      <h3 class='c-home-hero__tagline'>{{ site.description }}</h3>
+    </div>
+  </div>
+</div>
+
+<div class='o-grid'>
+  <div class='o-grid__col'>
+    <h5 class='c-heading'>
+      <span class='c-heading__title'>Recent Works</span>
+    </h5>
+  </div>
+</div>
+
+<div class='o-grid'>
+  {% for theme in themes limit:4 %}
+    {% include theme-card.liquid %}
+  {% endfor %}
+</div>
+
+<!-- <div class='o-grid'>
+  <div class='o-grid__col o-grid__col--2-4'>
+    <a class='c-btn c-btn--primary c-btn--full' href='/themes'>Browse Themes</a>
+  </div>
+
+  <div class='o-grid__col o-grid__col--2-4'>
+    <a class='c-btn c-btn--secondary c-btn--full' href='/docs'>Documentation</a>
+  </div>
+</div> -->
+
+<!-- {% include testimonials.html %} -->

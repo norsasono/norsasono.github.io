@@ -1,0 +1,48 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+title:            Noreta Agus Sasono
+description:      Personal Site of Noreta Agus Sasono
+url:              https://sasono.web.id
+disqus:           
+email:            noreta@sasono.web.id
+mailto:           mailto:noreta@sasono.web.id
+twitter:          http://www.twitter.com/aspirethemes
+medium:           https://medium.com/norsasono
+dribbble:         https://dribbble.com/norsasono
+github:           https://github.com/norsasono
+facebook:         https://www.facebook.com/norsasono
+instagram:        https://www.instagram.com/norsasono/
+themeforest:      
+creative_market:  
+upwork:           
+
+permalink: /blog/:title
+post_dirs: false
+markdown: kramdown
+
+include:
+  - _pages
+
+gems:
+  - jekyll-sitemap
+  - jekyll/tagging
+
+tag_page_dir:        tag
+tag_page_layout:     tag_page
+tag_permalink_style: pretty
+
+sass:
+  style: compressed
+
+collections:
+  themes:
+    output: true
+    permalink: /themes/:path/
+  docs:
+    output: true
+    permalink: /docs/:path/

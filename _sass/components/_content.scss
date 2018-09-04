@@ -1,0 +1,48 @@
+/*------------------------------------*\
+  Components > Content
+\*------------------------------------*/
+
+.c-content {
+  margin: 0 auto;
+  max-width: 700px;
+
+  &__title {
+    font-family: $font-serif;
+  }
+
+  a:not(.c-btn) {
+    transition: $global-transition;
+    text-decoration: underline;
+
+    @include attention() {
+      color: $color-brand;
+    }
+  }
+
+  img {
+    padding: $base-spacing-unit;
+    border: 1px solid $color-border;
+    text-align: center;
+    background-color: $bg-color-gray;
+  }
+
+  p,
+  ol,
+  ul {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-serif;
+
+    &:not(:first-child) {
+      margin-top: double($base-spacing-unit);
+    }
+  }
+}

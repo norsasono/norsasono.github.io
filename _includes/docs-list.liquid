@@ -1,0 +1,11 @@
+<div class='o-grid'>
+  {% for doc in site.docs %}
+    {% if doc.platform == include.platform %}
+      <div class="o-grid__col">
+        <a class='c-doc-card c-doc-card--{{ doc.platform | downcase }}' title='{{ doc.title }} {{ doc.platform }}' href='{{ doc.url }}'>
+          {{ doc.title }}
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
